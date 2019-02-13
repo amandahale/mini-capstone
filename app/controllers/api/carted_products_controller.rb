@@ -17,7 +17,8 @@ class Api::CartedProductsController < ApplicationController
     if @carted_product.save
       render 'show.json.jbuilder'
     else
-      render json: {errors: @carted_product.errors.full_messages}, status: :unprocessable_entity 
+      render json: {errors: @carted_product.errors.full_messages}, status: :unprocessable_entity
+    end 
   end
 
   def destroy
